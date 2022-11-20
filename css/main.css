@@ -12,26 +12,44 @@ img {
 }
 
 body {
-  margin: 0 1em;
   font-size: 16px;
+  margin: 0;
   font-family: "Source Serif Pro", serif;
-  line-height: 1.5em;
+  line-height: 1.5rem;
+}
+
+main {
+  margin: 1.5rem;
 }
 
 h1, h2, h3, h4 {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
-  line-height: 1.5em;
-  /* Margin seems too big at some parts */
-  margin: 0 0 1.5em 0;
+  line-height: 1.5rem;
 }
 
+
+/* How do I enter proper em/rem sizes? Can I do directly in pixel amounts? */
 h1 {
   font-weight: 800;
+  font-size: 81px;
+}
+
+h2 {
+  font-size: 54px;
+}
+
+h3 {
+  font-size: 36px;
+}
+
+h4 {
+  font-size: 1.5rem;
 }
 
 section {
-  margin: 4.5em 0;
+  /* Spacing not quite correct. */
+  margin: 4.5rem 0;
 }
 
 .replacing-jane {
@@ -49,37 +67,126 @@ section {
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 1em;
+  gap: 1rem;
 }
 
-.home-cards ul {
+.cards ul {
   list-style-type: none;
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 1em;
+  gap: 1rem;
 }
 
-.home-cards ul li {
+.cards ul li {
   background-color: #000;
   color: #fff;
-  padding: 1em;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.cards a {
+  text-decoration: none;
+  font-family: "poppins", sans-serif;
+  font-weight: 700;
+  text-align: center;
+}
+
+.cards button, .cards a {
+  font-size: 1.5rem;
+  font-weight: 700;
+  width: 100%;
+  padding: 1rem;
+  background-color: #ed2024;
+  color: #fff;
+  border: 1px solid #ed2024;
+}
+
+.cards button:hover, .cards a:hover{
+  background-color: #fff;
+  color: #ed2024;
+}
+
+footer {
+  font-family: "poppins", sans-serif;
+  padding: 1.5rem;
+  background-color: #000;
+  color: #fff;
+}
+
+footer .contact-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+footer a {
+  text-decoration: none;
+  color: #fff;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer em, dt, small {
+  font-style: normal;
+  font-weight: 700;
+}
+
+footer dd {
+  margin: 0;
+}
+
+footer ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  order: -1;
+}
+
+footer li img {
+  /* Size is still wrong; should be double. */
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+footer small {
+  display: block;
+  text-align: center;
 }
 
 /* Following css styling for shop page */
+.your-cart {
+  font-family: "poppins", sans-serif;
+}
+
+.cart-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.cart-info p {
+  margin: auto 0;
+}
+
 .cart-items {
-  border: 1px solid #000;
+  margin: -1px 0;
 }
 
 /* is a grid necessary here? */
 .cart-item-row {
   display: grid;
-  grid-template-columns: auto 3em;
+  grid-template-columns: auto 3rem;
   grid-template-rows: 1fr;
+  outline: 1px solid #000;
+  margin: 1px 1px;
 }
 
 .cart-item-info {
-    padding: 1.5em;
+    padding: 1.5rem;
 }
 
 .cart-item-detailed {
@@ -91,7 +198,20 @@ section {
 .item-price {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
-  line-height: 1.5em;
+  line-height: 1.5rem;
+}
+
+.remove-item {
+  background-color: #000;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  border: 1px solid #000;
+  margin: -1px;
+}
+
+.remove-item:hover {
+  color: #ed2024;
 }
 
 .checkout-button h3 {
@@ -102,12 +222,12 @@ section {
   background-color: #ed2024;
   color: #fff;
   border: none;
-  padding: 1.5em;
+  padding: 1.5rem;
+  border: 1px solid #ed2024;
   width: 100%;
 }
 
 .checkout-button:hover {
   background-color: #fff;
   color: #ed2024;
-  border: 1px solid #ed2024;
 }
