@@ -18,31 +18,40 @@
     <h1>Shop</h1>
   </header>
   <main role="main">
-    <section>
-      <h3>Your Cart</h3>
-      <p>subtotal: <span class="cart-subtotal">$0</span></p>
+    <section class="your-cart">
+      <div class="cart-info">
+        <h3>Your Cart</h3>
+        <!-- Is a p tag appropriate? -->
+        <p>subtotal: <span class="cart-subtotal">$0</span></p>
+      </div>
       <!-- Placeholder text below -->
       <div class="cart-items">
       </div>
       <button class="checkout-button"><h3>Checkout</h3></button>
     </section>
-    <section>
+    <section class="cards">
       <h3>Add Item</h3>
       <!-- Cards to add items to cart.
       Will have to change a to something else for interactivity. -->
-      <div class="shop-item">
-        <span class="shop-item-title">Standard</span>
-        <img src="" alt="">
-        <p>Enjoy the story. Softcover with saddlestitching.</p>
-        <button class="shop-item-button">Add Standard to Cart</button>
-      </li>
-      <div class="shop-item">
-        <span class="shop-item-title">Deluxe</span>
-        <img src="" alt="">
-        <p>Enjoy the story and bonus content including previews for Volume II. Hardcover and case-bound.</p>
-        <button class="shop-item-button">Add Deluxe to Cart</button>
-      </div>
+      <ul>
+        <li class="shop-item">
+          <h4 class="shop-item-title">Standard</h4>
+          <img src="images/standard-mockup-800x800.jpg" alt="An image of the standard version of Replacing Jane.">
+          <p>Enjoy the story. Softcover with saddlestitching.</p>
+          <button class="shop-item-button">Add Standard to Cart</button>
+        </li>
+        <li class="shop-item">
+          <h4 class="shop-item-title">Deluxe</h4>
+          <img src="images/deluxe-mockup-800x800.jpg" alt="An image of the deluxe version of Replacing Jane.">
+          <p>Enjoy the story and bonus content including previews for Volume II. Hardcover and case-bound.</p>
+          <button class="shop-item-button">Add Deluxe to Cart</button>
+        </li>
+      </ul>
     </section>
+
+
+
+    
   </main>
   <footer role="contentinfo">
 
