@@ -61,9 +61,53 @@ section {
 }
 
 .home-cards ul li {
-  background-color: #000000;
-  color: #ffffff;
+  background-color: #000;
+  color: #fff;
   padding: 1em;
 }
 
-/* This is for the shop page */
+/* Following css styling for shop page */
+.cart-items {
+  border: 1px solid #000;
+}
+
+/* is a grid necessary here? */
+.cart-item-row {
+  display: grid;
+  grid-template-columns: auto 3em;
+  grid-template-rows: 1fr;
+}
+
+.cart-item-info {
+    padding: 1.5em;
+}
+
+.cart-item-detailed {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.item-price {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  line-height: 1.5em;
+}
+
+.checkout-button h3 {
+  margin: 0;
+}
+
+.checkout-button {
+  background-color: #ed2024;
+  color: #fff;
+  border: none;
+  padding: 1.5em;
+  width: 100%;
+}
+
+.checkout-button:hover {
+  background-color: #fff;
+  color: #ed2024;
+  border: 1px solid #ed2024;
+}
