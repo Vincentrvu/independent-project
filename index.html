@@ -10,12 +10,23 @@
 </head>
 <body>
     <header role="banner">
+      <!-- Does nav have to be in the header? -->
       <nav role="navigation">
         <ul>
           <li><a href="shop.html">Shop</a></li>
           <li><a href="about.html">About</a></li>
         </ul>
       </nav>
+      <div class="hero-banner">
+        <div class="banner-text">
+          <!-- This probably isn't very good for accessibility... is it -->
+          <h1><img src="images/replacing-jane-banner-text.svg" alt="Replacing Jane"></h1>
+          <h2>Coming Soon!</h2>
+          <!-- Should the a be an h3 as well? -->
+          <h3><a href="shop.html">Pre-Order Now</a></h3>
+        </div>
+        <img src="images/hero-banner-image.svg" alt="">
+      </div>
     </header>
     <main role="main">
       <section>
@@ -35,18 +46,18 @@
       <section class="cards">
         <h3>Volume I</h3>
         <ul>
-          <li>
-            <h4>Standard</h4>
+          <li class="shop-item">
+            <h4 class="shop-item-title">Standard</h4>
             <img src="images/standard-mockup-800x800.jpg" alt="An image of the standard version of Replacing Jane.">
             <p>Enjoy the story. Softcover with saddlestitching.</p>
             <!-- Not sure why href is not bringing user to shop. -->
-            <a href="shop.html">Pre-Order Standard</a>
+            <a href="shop.html" class="shop-item-button">Pre-Order Standard</a>
           </li>
-          <li>
-            <h4>Deluxe</h4>
+          <li class="shop-item">
+            <h4 class="shop-item-title">Deluxe</h4>
             <img src="images/deluxe-mockup-800x800.jpg" alt="An image of the deluxe version of Replacing Jane.">
             <p>Enjoy the story and bonus content including previews for Volume II. Hardcover and case-bound.</p>
-            <a href="shop.html">Pre-Order Deluxe</a>
+            <a href="shop.html" class="shop-item-button">Pre-Order Deluxe</a>
           </li>
         </ul>
       </section>
