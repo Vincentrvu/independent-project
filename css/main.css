@@ -25,7 +25,7 @@ main {
 h1, h2, h3, h4 {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
-  line-height: 1.5rem;
+  line-height: 1.5em;
 }
 
 
@@ -36,6 +36,7 @@ h1 {
 }
 
 h2 {
+  font-weight: 500;
   font-size: 54px;
 }
 
@@ -50,6 +51,46 @@ h4 {
 section {
   /* Spacing not quite correct. */
   margin: 4.5rem 0;
+}
+
+.hero-banner {
+  padding: 1.5rem;
+  background-color: #000;
+  color: #fff;
+  /* Should I be using flex for this? */
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.hero-banner img {
+  animation: fade-in 1.5s ease-in-out 0s 1;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0%;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 100%;
+    transform: translateY(0);
+  }
+}
+
+.banner-text a {
+  display: block;
+  width: 100%;
+  padding: 1.5rem;
+  text-decoration: none;
+  text-align: center;
+  background-color: #ed2024;
+  color: #fff;
+  border: 1px solid #ed2024;
+}
+
+.banner-text a:hover {
+  background-color: #fff;
+  color: #ed2024;
 }
 
 .replacing-jane {
