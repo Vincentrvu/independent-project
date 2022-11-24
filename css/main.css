@@ -77,6 +77,39 @@ section {
   }
 }
 
+nav {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+nav img {
+  width: 3rem;
+  height: auto;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+nav li a {
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #000;
+}
+
+nav li a:hover {
+  color: #ed2024;
+}
+
 .banner-text a {
   display: block;
   width: 100%;
