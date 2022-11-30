@@ -119,7 +119,7 @@ more details) Need help. */
   font-size: 2.25rem;
 }
 
-label .exit {
+.nav-toggle-label .exit {
   transition: display 0.5s ease;
   display: none;
 }
@@ -129,11 +129,12 @@ label .exit {
   max-height: 200%;
 }
 
-.nav-toggle:checked ~ label .menu {
+/* Switches between menu and close icon */
+.nav-toggle:checked ~ .nav-toggle-label .menu {
   display: none;
 }
 
-.nav-toggle:checked ~ label .exit {
+.nav-toggle:checked ~ .nav-toggle-label .exit {
   display: block;
 }
 
@@ -141,7 +142,7 @@ label .exit {
   display: block;
 }
 
-label:hover {
+.nav-toggle-label:hover {
   color: #ed2024;
 }
 
@@ -381,7 +382,22 @@ footer small {
   color: #ed2024;
 }
 
-/* Media queries
-nav ul {
-flex-direction: row;
-} */
+@media only screen and (min-width:42rem) {
+  header {
+    flex-direction: row;
+  }
+
+  nav {
+    top: 0;
+    overflow: visible;
+  }
+
+  .nav-toggle-label {
+    display: none;
+  }
+
+  nav ul {
+  flex-direction: row;
+  justify-content: flex-end;
+  }
+}
