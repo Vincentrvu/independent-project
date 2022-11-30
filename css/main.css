@@ -85,23 +85,49 @@ section {
 }
 
 header {
+  background-color: #fff;
   padding: 1rem 1.5rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 2;
 }
 
 .logo {
+  display: inline-block;
   width: 3rem;
   height: auto;
 }
 
-nav {
+input.nav-toggle:checked ~ nav {
+  transform: scaleY(1);
+  height: auto;
+}
+
+.nav-toggle {
   display: none;
 }
 
-input.nav-toggle:checked ~ nav {
-  display: block;
+.nav-toggle-label {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1.5rem;
+}
+
+nav {
+  top: 100%;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  background-color: #fff;
+  overflow: hidden;
+  height: 0;
+  transform: scaleY(0);
+  transform-origin: top;
 }
 
 nav ul {
