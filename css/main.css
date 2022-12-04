@@ -45,6 +45,13 @@ h4 {
   font-size: 1.5rem;
 }
 
+h5 {
+  margin: 0;
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: 1.5em;
+}
+
 p {
   margin: 0;
 }
@@ -56,11 +63,19 @@ section {
 
 .hero-banner {
   background-color: #000;
+  /* Need to add white to the svg */
+  background-image: url("../images/hero-banner-background.svg");
+  background-position: botto,;
+  background-size: cover;
+  background-repeat: no-repeat;
   color: #fff;
   padding: 1.5rem;
+  padding-bottom: 5.063rem;
   /* Should I be using flex for this? */
   display: flex;
   flex-direction: column-reverse;
+  gap: 0;
+  height: 200%;
 }
 
 .hero-banner > img {
@@ -198,17 +213,6 @@ nav li a:hover {
   color: #ed2024;
 }
 
-.replacing-jane {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.replacing-jane p, .replacing-jane img {
-  flex-basis: 0;
-  flex-grow: 1;
-}
-
 .preview ol {
   list-style-type: none;
   padding: 0;
@@ -256,6 +260,48 @@ nav li a:hover {
 .cards button:hover, .cards a:hover{
   background-color: #fff;
   color: #ed2024;
+}
+
+/* The following styling is for the ABOUT page */
+
+.info-img-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.info-img-wrap p, .info-img-wrap img {
+  flex-basis: 0;
+  flex-grow: 1;
+}
+
+.info-img-wrap img {
+  object-fit: cover;
+}
+
+.specs {
+  margin-top: 1.5rem;
+}
+
+.specs-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.specs-wrapper dl {
+  margin: 0;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: repeat(5, auto);
+}
+
+.specs-wrapper dd {
+  text-align: right;
+}
+
+.specs-wrapper dt {
+  font-weight: normal;
 }
 
 footer {
@@ -364,6 +410,10 @@ footer small {
   color: #ed2024;
 }
 
+.item-quantity {
+  border: 1px solid #000;
+}
+
 .checkout-button h3 {
   margin: 0;
 }
@@ -399,5 +449,41 @@ footer small {
   nav ul {
   flex-direction: row;
   justify-content: flex-end;
+  }
+
+  .hero-banner {
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+
+  .hero-banner img, .banner-text {
+    flex-basis: 0;
+    flex-grow: 1;
+  }
+
+  .info-img-wrap {
+    flex-direction: row;
+  }
+
+  .more-reversed {
+    flex-direction: row-reverse;
+  }
+
+  .specs-wrapper {
+    flex-direction: row;
+  }
+
+  .preview ol {
+    flex-direction: row;
+  }
+
+  .cards ul {
+    flex-direction: row;
+  }
+
+
+
+  footer .contact-wrapper {
+    flex-direction: row;
   }
 }
