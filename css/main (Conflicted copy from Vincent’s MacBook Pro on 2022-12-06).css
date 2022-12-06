@@ -61,14 +61,6 @@ section {
   margin: 4.5rem 1.5rem;
 }
 
-main section:first-of-type {
-  margin-top: 1.5rem;
-}
-
-main section:last-child {
-  margin-bottom: 1.5rem;
-}
-
 .hero-banner {
   /* I'll have to make a new image and have the background image be an img. Ill attatch it to the bottom of the thing as position relative. */
   background-color: #000;
@@ -118,7 +110,6 @@ header {
   position: sticky;
   top: 0;
   z-index: 2;
-  box-shadow: 0 10px 10px rgb(0, 0, 0, 0.2);
 }
 
 .logo {
@@ -182,7 +173,7 @@ nav {
   max-height: 0;
   transform-origin: top;
   transition: max-height 0.5s ease;
-  box-shadow: 0 10px 10px rgb(0, 0, 0, 0.2);
+  filter: drop-shadow(30px 0 0 #000);
 }
 
 nav ul {
@@ -347,31 +338,8 @@ footer {
 }
 
 footer .contact-wrapper {
-  display: grid;
-  grid-template-areas:
-    "contact-top"
-    "contact-middle"
-    "contact-bottom";
-  gap: 1.5rem;
-  margin: 1.5rem 0;
-  margin-bottom: 4.5rem;
-}
-
-.contact-wrapper .contact-address {
-  grid-area: contact-middle;
-}
-
-.contact-wrapper .contact-hours {
-  grid-area: contact-bottom;
-}
-
-.contact-wrapper ul {
-  margin: 0;
-  grid-area: contact-top;
-}
-
-.contact-hours dl {
-  margin: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 footer a {
@@ -502,21 +470,16 @@ footer small {
   }
 
   main > section {
-    margin: 4.5rem 5rem;
+    margin: 1.5rem 5rem;
   }
 
-  main > .hero-banner, main > .other-banner {
+  main > .hero-banner {
     padding: 1.5rem 5rem;
     padding-bottom: 5.063rem;
   }
 
-  footer {
-    padding: 1.5rem 5rem;
-  }
-
   header {
     flex-direction: row;
-    box-shadow: 0 10px 10px rgb(0, 0, 0, 0.2);
   }
 
   nav {
@@ -597,21 +560,7 @@ footer small {
   }
 
   footer .contact-wrapper {
-    grid-template-areas:
-      "contact-top-left contact-top-right"
-      "contact-bottom-left contact-bottom-right";
-  }
-
-  .contact-wrapper .contact-address {
-    grid-area: contact-top-left;
-  }
-
-  .contact-wrapper .contact-hours {
-    grid-area: contact-bottom-left;
-  }
-
-  .contact-wrapper ul {
-    grid-area: contact-top-right;
+    flex-direction: row;
   }
 }
 
@@ -621,16 +570,12 @@ footer small {
   }
 
   main > section {
-    margin: 4.5rem 9rem;
+    margin: 1.5rem 9rem;
   }
 
   main > .hero-banner, main > .other-banner {
     padding: 1.5rem 9rem;
     padding-bottom: 5.063rem;
-  }
-
-  footer {
-    padding: 1.5rem 9rem;
   }
 
   .cards ul {
@@ -646,22 +591,5 @@ footer small {
       "left top top"
       "left bottom bottom";
     grid-template-columns: 1fr 1fr 1fr;
-  }
-
-  footer .contact-wrapper {
-    grid-template-areas:
-      "contact-left contact-middle contact-right";
-  }
-
-  .contact-wrapper .contact-address {
-    grid-area: contact-left;
-  }
-
-  .contact-wrapper .contact-hours {
-    grid-area: contact-middle;
-  }
-
-  .contact-wrapper ul {
-    grid-area: contact-right;
   }
 }
