@@ -123,6 +123,12 @@ header {
   display: inline-block;
   width: 2.5rem;
   height: auto;
+  z-index: 999;
+  transition: 0.5s ease;
+}
+
+header > img:hover {
+  transform: rotate(-25deg);
 }
 
 .nav-toggle {
