@@ -35,6 +35,7 @@ h1 {
 h2 {
   font-weight: 500;
   font-size: 3.375rem;
+  margin-bottom: 1.5rem;
 }
 
 h3 {
@@ -69,16 +70,19 @@ main section:last-child {
   margin-bottom: 1.5rem;
 }
 
-.hero-banner {
+.hero-banner, .other-banner {
   /* I'll have to make a new image and have the background image be an img. Ill attatch it to the bottom of the thing as position relative. */
   background-color: #000;
   background-image: url("../images/hero-banner-background.svg");
-  background-position: bottom;
   background-size: contain;
+  background-position: bottom;
   background-repeat: no-repeat;
   color: #fff;
   padding: 1.5rem;
   padding-bottom: 9rem;
+}
+
+.hero-banner {
   /* Should I be using flex for this? */
   display: flex;
   flex-direction: column-reverse;
@@ -101,12 +105,6 @@ main section:last-child {
     opacity: 100%;
     transform: translateY(0);
   }
-}
-
-.other-banner {
-  padding: 1.5rem;
-  background-color: #000;
-  color: #fff;
 }
 
 header {
@@ -203,6 +201,7 @@ nav li a {
   font-size: 1.5rem;
   color: #000;
   text-align: right;
+  transition: 0.2s ease;
 }
 
 nav li a:hover {
@@ -218,6 +217,7 @@ nav li a:hover {
   background-color: #ed2024;
   color: #fff;
   border: 1px solid #ed2024;
+  transition: 0.2s ease;
 }
 
 .banner-text a:hover {
@@ -269,6 +269,7 @@ nav li a:hover {
   background-color: #ed2024;
   color: #fff;
   border: 1px solid #ed2024;
+  transition: 0.2s ease;
 }
 
 .cards button:hover, .cards a:hover{
@@ -370,6 +371,10 @@ footer .contact-wrapper {
   grid-area: contact-top;
 }
 
+.contact-wrapper ul a:hover ~ .contact-wrapper ul img {
+  fill: red;
+}
+
 .contact-hours dl {
   margin: 0;
 }
@@ -377,6 +382,7 @@ footer .contact-wrapper {
 footer a {
   text-decoration: none;
   color: #fff;
+  transition: 0.2s ease;
 }
 
 footer a:hover {
@@ -468,6 +474,7 @@ footer small {
   font-weight: 700;
   border: 1px solid #000;
   margin: -1px;
+  transition: 0.2s ease;
 }
 
 .remove-item:hover {
@@ -489,6 +496,7 @@ footer small {
   padding: 1.5rem;
   border: 1px solid #ed2024;
   width: 100%;
+  transition: 0.2s ease;
 }
 
 .checkout-button:hover {
