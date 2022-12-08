@@ -140,6 +140,7 @@ header > img:hover {
   top: 0;
   right: 0;
   padding: 1.5rem;
+  transition: 0.2s ease;
 }
 
 /* Currently not letting me change font size. Seems to be some sort of
