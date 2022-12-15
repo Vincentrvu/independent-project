@@ -38,8 +38,6 @@ function checkoutClicked() {
 
 function removeCartItem(event) {
   var buttonClicked = event.target
-  // Put parentElement as many times as there are parents to remove.
-  // remove function removes the parent
   buttonClicked.parentElement.remove()
   updateCartSubtotal()
 }
@@ -54,7 +52,6 @@ function quantityChanged(event) {
 
 function addToCartClicked(event) {
   var button = event.target
-  // parentElement represents the amount of times we need to exit parent elements until we reach "shop-item"
   var shopItem = button.parentElement
   var title = shopItem.getElementsByClassName("shop-item-title")[0].innerText
   var price = 0
@@ -79,7 +76,7 @@ function addItemToCart(title, price) {
       return
     }
   }
-  // Paste your default cart row html content into this variable
+
   var cartRowContents = `
     <div class="cart-item-info">
       <h4 class="cart-item-title">${title}</h4>
@@ -90,7 +87,6 @@ function addItemToCart(title, price) {
     </div>
     <button class="remove-item">X</button>`
   cartRow.innerHTML = cartRowContents
-  // Append adds cart row to end of cart items
   cartItems.append(cartRow)
   cartRow.getElementsByClassName("remove-item")[0].addEventListener("click", removeCartItem)
   cartRow.getElementsByClassName("item-quantity")[0].addEventListener("change", quantityChanged)
@@ -101,7 +97,6 @@ function updateCartSubtotal() {
   var cartRows = cartItemContainer.getElementsByClassName("cart-item-row")
   var subtotal = 0
   for (var i = 0; i < cartRows.length; i++) {
-    // Cycles through rows of cart items
     var cartRow = cartRows[i]
     var quantityElement = cartRow.getElementsByClassName("item-quantity")[0]
     var priceElement = cartRow.getElementsByClassName("item-price")[0]

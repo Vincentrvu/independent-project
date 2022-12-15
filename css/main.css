@@ -1,10 +1,9 @@
 html {
-  /* content stays responsive */
   box-sizing: border-box;
   font-family: "Source Serif Pro", serif;
   line-height: 1.5;
 }
-/* adding above property to all the elements by default */
+
 * {
   box-sizing: inherit;
 }
@@ -24,8 +23,6 @@ h1, h2, h3, h4 {
   line-height: 1.5em;
 }
 
-
-/* How do I enter proper em/rem sizes? Can I do directly in pixel amounts? */
 h1 {
   margin: 0;
   font-weight: 800;
@@ -58,7 +55,6 @@ p {
 }
 
 section {
-  /* Spacing not quite correct. */
   margin: 4.5rem 1.5rem;
 }
 
@@ -71,7 +67,6 @@ main section:last-child {
 }
 
 .hero-banner, .other-banner {
-  /* I'll have to make a new image and have the background image be an img. Ill attatch it to the bottom of the thing as position relative. */
   background-color: #000;
   clip-path: polygon(0 0%, 100% 0, 100% 92%, 0 100%);
   color: #fff;
@@ -93,7 +88,7 @@ main section:last-child {
 .hero-banner > img {
   max-height: 12rem;
   animation: fade-in 1.5s ease-in-out 0s 1;
-  margin: auto;
+  margin: 1rem 0 2.25rem 0;
 }
 
 @keyframes fade-in {
@@ -143,9 +138,6 @@ header > img:hover {
   transition: 0.2s ease;
 }
 
-/* Currently not letting me change font size. Seems to be some sort of
-default styling that comes with the icon (check inspect eleemnt for
-more details) Need help. */
 .material-icons-outlined {
   font-size: 2.25rem;
 }
@@ -155,12 +147,10 @@ more details) Need help. */
   display: none;
 }
 
-/* Not sure why this needs 200%. */
 .nav-toggle:checked ~ nav {
   max-height: 200%;
 }
 
-/* Switches between menu and close icon */
 .nav-toggle:checked ~ .nav-toggle-label .menu {
   display: none;
 }
@@ -267,7 +257,6 @@ nav li a:hover {
   margin-top: auto;
 }
 
-/* Do I need any buttons? */
 .cards button, .cards a {
   font-size: 1.5rem;
   font-weight: 700;
@@ -283,8 +272,6 @@ nav li a:hover {
   background-color: #fff;
   color: #ed2024;
 }
-
-/* The following styling is for the ABOUT page */
 
 .info-img-wrap {
   display: flex;
@@ -414,7 +401,6 @@ footer ul {
 }
 
 footer li img {
-  /* Size is still wrong; should be double. */
   width: 1.5rem;
   height: 1.5rem;
 }
@@ -424,7 +410,6 @@ footer small {
   text-align: center;
 }
 
-/* Following css styling for shop page */
 .your-cart {
   font-family: "poppins", sans-serif;
 }
@@ -443,7 +428,6 @@ footer small {
   margin: -1px 0;
 }
 
-/* is a grid necessary here? */
 .cart-item-row {
   display: grid;
   grid-template-columns: auto 3rem;
@@ -567,6 +551,7 @@ footer small {
 
   .hero-banner > img {
     max-height: 15rem;
+    margin: auto;
   }
 
   .info-img-wrap {
